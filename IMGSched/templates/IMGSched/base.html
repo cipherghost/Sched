@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+        <ul>
+{# Django Home Link / Admin Link / Register Link#}
+          <li><a href="{% url 'index' %}">DJANGO</a></li>
+          {% if user.userprofileinfo.post == 'A' %}
+          <li><a href="{% url 'admin:index' %}">Admin</a></li>
+          {% endif %}
+          {% if not user.is_authenticated %}
+          <li><a href="{% url 'IMGSched:register' %}">Register</a></li>
+          {% endif %}
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li><a href="{% url 'IMGSched:user_login' %}">Login</a></li>
+          {% endif %}
+		</ul>
+    
+    </nav>
+    <div>
+    {% block body_block %}
+    {% endblock %}
+    </div>
+  </body>
+</html>

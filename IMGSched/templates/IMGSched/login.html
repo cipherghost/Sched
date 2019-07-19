@@ -1,0 +1,15 @@
+{% extends 'IMGSched/base.html' %}
+{% block body_block %}
+      <h1>Login here :</h1>
+<form method="post" action="{% url 'IMGSched:user_login' %}">
+          {% csrf_token %}
+          {# A more "HTML" way of creating the login form#}
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="Username">
+<label for="password">Password:</label>
+          <input type="password" name="password" placeholder="Password">
+<input type="submit" name="" value="Login">
+<p><strong>-- OR --</strong></p>
+  <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+</form>
+{% endblock %}
