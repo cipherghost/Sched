@@ -53,7 +53,7 @@ export default class Service{
 
 	delMeet(access, meeting_id){
 		const url= `http://localhost:8000/api/meetings/${meeting_id}`;
-		return axios.get(url, {
+		return axios.delete(url, {
 			headers: {
 				'Authorization': 'Bearer ' + access
 			}

@@ -72,9 +72,9 @@ export default class FeedComment extends Component {
             return (
                 <Container>
                 <Form.TextArea onChange={this.handleChange}/>
-                    <Button content='Add Reply' labelPosition='left' icon='edit' basic color='blue' size='small' onClick={this.onComment}/>
+                    <Button content='Add Reply' labelPosition='left' icon='edit' secondary size='small' onClick={this.onComment}/>
 
-                <Button size='small' basic color='blue' name='delete' onClick={this.deleteMeet}>
+                <Button size='small' secondary name='delete' onClick={this.deleteMeet}>
                     Delete Meet
                 </Button>
 
@@ -83,7 +83,7 @@ export default class FeedComment extends Component {
                     content='Meet Detail'
                     size='small'
                     disabled={open}
-                    basic color='blue'
+                    secondary
                     onClick={this.handleOpen}
                 />
 
@@ -120,7 +120,7 @@ export default class FeedComment extends Component {
                         content='Add Reply' 
                         labelPosition='left' 
                         icon='edit' 
-                        basic color='blue' 
+                        secondary 
                         size='small' 
                         onClick={this.onComment}
                     />  
@@ -130,7 +130,7 @@ export default class FeedComment extends Component {
                     content='Meet Detail'
                     size='small'
                     disabled={open}
-                    basic color='blue'
+                    secondary
                     onClick={this.handleOpen}
                 />
 
