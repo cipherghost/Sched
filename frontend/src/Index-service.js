@@ -26,6 +26,11 @@ export default class Service{
 		.then(response => response.data);	
 	}
 
+	addComment(comment){
+		return axios.post('http://localhost:8000/api/comments/', comment)
+		.then(response => response.data)
+	}
+
 	getMeet(access){
 		const url = `http://localhost:8000/api/meetings/`;
 		return axios.get(url, {
@@ -35,6 +40,16 @@ export default class Service{
 		})
 		.then(response => response.data);
 	} 
+
+	userByID(access){
+		const url = `http://localhost:8000/api/users/`;
+		return axios.get(url, {
+			headers: {
+				'Authorization': 'Bearer'+ " " + access
+			}
+		})
+		.then(response => response.data);
+	}
 
 	delMeet(access, meeting_id){
 		const url= `http://localhost:8000/api/meetings/${meeting_id}`;

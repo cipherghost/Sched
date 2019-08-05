@@ -24,9 +24,6 @@ class CommentConsumer(AsyncWebsocketConsumer):
         comment = json.loads(text_data)
         
         # response = requests.post(url=API_URL, data={**json_data})
-        print('*'*50)
-        print(comment)
-        print('*'*50)
         await self.channel_layer.group_send(
             self.group_name,
             {

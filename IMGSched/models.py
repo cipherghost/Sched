@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Meeting(models.Model):
+	meeting_id = models.AutoField(primary_key=True)
 	created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='meetings')
 	created_on = models.DateTimeField(default=timezone.now)
 	purpose = models.CharField(max_length=50)

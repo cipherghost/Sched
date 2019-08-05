@@ -20,7 +20,7 @@ class Home extends Component{
 
   directPage(user){
     if(this.state.activeItem === 'home')
-      return <meetList user={user} />;
+      return <MeetList user={user} />;
     if(this.state.activeItem === 'create')
       return <MeetAdd user={this.state.user}/>;
     if(this.state.activeItem === 'logout')
