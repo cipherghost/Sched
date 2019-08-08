@@ -13,7 +13,7 @@ IMGSched is an application for scheduling meetings at Information Management Gro
 First, clone the repository to your local machine:
 
 `````bash
-git clone https://github.com/Shanu212/IMGSched.git
+git clone https://github.com/cipherghost/Sched.git
 `````
 
 Install the requirements:
