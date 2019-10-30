@@ -4,7 +4,7 @@ defusedxml==0.6.0
 Django==2.2.2
 django-rest-framework==0.1.0
 djangorestframework==3.9.4
-httpie==1.0.2
+httpie==1.0.3
 idna==2.8
 oauthlib==3.0.1
 psycopg2==2.8.2
